@@ -1,0 +1,14 @@
+syntax = "proto3";
+package app;
+
+service Post {
+  rpc PostHello(PostRequest) returns (PostReply) {}
+}
+
+message PostRequest {
+  string title = 1;
+}
+
+message PostReply {
+  string title = 1;
+}

@@ -5,16 +5,16 @@ require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("app.proto", :syntax => :proto3) do
-    add_message "app.PostRequest" do
+    add_message "app.TitleRequest" do
       optional :title, :string, 1
     end
-    add_message "app.PostReply" do
+    add_message "app.TitleReply" do
       optional :title, :string, 1
     end
   end
 end
 
 module App
-  PostRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("app.PostRequest").msgclass
-  PostReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("app.PostReply").msgclass
+  TitleRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("app.TitleRequest").msgclass
+  TitleReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("app.TitleReply").msgclass
 end

@@ -1,14 +1,14 @@
 syntax = "proto3";
 package app;
 
-service Post {
-  rpc PostHello(PostRequest) returns (PostReply) {}
+service PostAppService {
+  rpc PostTitle(TitleRequest) returns (TitleReply) {}
 }
 
-message PostRequest {
+message TitleRequest {
   string title = 1;
 }
 
-message PostReply {
+message TitleReply {
   string title = 1;
 }

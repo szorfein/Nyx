@@ -30,3 +30,22 @@ spec.add_dependency "grpc"
     app_pb.rb app_services_pb.rb
 
 First part done...
+
+### Names
+
+bundle gem app
+vim        app/proto/app.proto
+   package app;
+   service PostAppService
+       rpc PostTitle(TitleRequest) returns (TitleReply)
+   message TitleRequest
+   message TitleReply
+vim        lib/services/app_service.rb
+     class AppService < App::PostAppService::Service
+       def post_title() App::TitleReply.new(post_req, _unused_call)
+vim        lib/client/app_client.rb
+       def main stub = App::PostAppService::Stub.new(addr)
+           message = stub.post_title(App::TitleRequest.new()) # proto/app_pb.rb
+
+vim        lib/server/start.rb
+     class Server.start @server.handle(Services::AppService)

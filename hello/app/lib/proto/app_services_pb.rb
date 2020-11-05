@@ -2,19 +2,19 @@
 # Source: app.proto for package 'app'
 
 require 'grpc'
-require 'app_pb'
+require_relative 'app_pb'
 
 module App
-  module Post
+  module PostAppService
     class Service
 
       include GRPC::GenericService
 
       self.marshal_class_method = :encode
       self.unmarshal_class_method = :decode
-      self.service_name = 'app.Post'
+      self.service_name = 'app.PostAppService'
 
-      rpc :PostHello, ::App::PostRequest, ::App::PostReply
+      rpc :PostTitle, ::App::TitleRequest, ::App::TitleReply
     end
 
     Stub = Service.rpc_stub_class

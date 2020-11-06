@@ -21,4 +21,7 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+## Links
++ https://www.howtographql.com/graphql-ruby/1-getting-started/
++ https://dev.to/k_penguin_sato/graphql-rubyclass-based-api-523n
++ https://rollout.io/blog/how-to-implement-a-graphql-api-in-rails/

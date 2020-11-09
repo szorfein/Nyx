@@ -3,11 +3,14 @@
 set -o errexit -o nounset
 
 if ! systemctl is-active docker ; then
-  echo "[+] Starting Docker"
+  echo "[+] Start Docker"
   sudo systemctl start docker
 fi
 
-echo "[+] Starting GraphQL API server"
+echo "[+] Start Databases"
+sudo docker-compose up -d
+
+echo "[+] Start GraphQL API server"
 (cd graphql/app \
   && bundle exec rails server
 )

@@ -39,3 +39,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'graphiql-rails', '1.7.0', group: :development
+
+gem 'nyx-post', :git => "https://github.com/szorfein/nyx-post", :branch => 'main'
+gem 'grpc', '~> 1.0'

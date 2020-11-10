@@ -14,8 +14,10 @@ pickle-email-*.html
 # Ignore all logfiles and tempfiles.
 post/app/tmp/*
 graphql/app/tmp/*
-!/log/.keep
-!/tmp/.keep
+!post/app/log/.keep
+!graphql/app/log/.keep
+!post/app/tmp/.keep
+!graphql/app/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
 post/app/config/initializers/secret_token.rb

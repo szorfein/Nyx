@@ -37,3 +37,6 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+gem 'nyx-post', :git => "https://github.com/szorfein/nyx-post", :branch => 'main'
+gem 'grpc', '~> 1.0'

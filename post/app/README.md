@@ -10,6 +10,7 @@ HEADER only
     $ curl -I http://localhost:3000/
 
 GET
+    
     $ curl http://localhost:3000/api/v1/posts
     $ curl http://localhost:3000/api/v1/posts/id
 

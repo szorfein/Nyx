@@ -5,5 +5,4 @@
 # Create databases
 
     $ bundle exec rails db:create
-    $ RAILS_ENV=test bundle exec rails db:create
     $ RAILS_ENV=production bundle exec rails db:create

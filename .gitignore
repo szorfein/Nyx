@@ -12,14 +12,16 @@ rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
-/log/*
-/tmp/*
+post/app/tmp/*
+graphql/app/tmp/*
 !/log/.keep
 !/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-config/initializers/secret_token.rb
-config/master.key
+post/app/config/initializers/secret_token.rb
+post/app/config/master.key
+graphql/app/config/initializers/secret_token.rb
+graphql/app/config/master.key
 
 # Only include if you have production secrets in this file, which is no longer a Rails default
 # config/secrets.yml
@@ -65,3 +67,5 @@ yarn-debug.log*
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
+
+*.swp

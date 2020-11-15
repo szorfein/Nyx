@@ -1,9 +1,11 @@
+require 'nyx_post'
+
 class Api::V1::PostsController < ApplicationController
   before_action :find_post, only: [:show, :destroy]
 
   def index
-    @posts = Post.all
-    render json: @posts
+    posts = NyxPost::Client::GetPost.new.all(0, 0)
+    render json: posts
   end
 
   def show

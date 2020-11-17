@@ -1,0 +1,3 @@
+[submodule "post/app"]
+	path = post/app
+	url = https://github.com/szorfein/nyx-post

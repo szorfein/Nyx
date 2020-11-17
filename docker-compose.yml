@@ -1,6 +1,15 @@
 version: '3.8'
 
 services:
+  #post:
+  #  build:
+  #    context: .
+  #    dockerfile: ./post/app.dockerfile
+  #  depends_on:
+  #    - post_db
+  #  environment:
+  #    DATABASE_URL: postgres://nyx-post:postgres@127.0.0.1:5432/nyx-post?sslmode=disable
+  #  restart: on-failure
 
   post_db:
     build:
@@ -10,6 +19,7 @@ services:
       - 127.0.0.1:5432:5432
     network_mode: host
     environment:
+      POSTGRES_DB: nyx-post
       POSTGRES_USER: nyx-post
       POSTGRES_PASSWORD: postgres
     restart: unless-stopped

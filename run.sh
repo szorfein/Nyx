@@ -7,7 +7,7 @@ if ! systemctl is-active docker ; then
   sudo systemctl start docker
 fi
 
-echo "[+] Start Databases"
+echo "[+] Start Docker-Compose"
 sudo docker-compose up -d
 
 echo "[+] Start GraphQL API server"

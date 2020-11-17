@@ -12,16 +12,16 @@ rerun.txt
 pickle-email-*.html
 
 # Ignore all logfiles and tempfiles.
-post/app/tmp/*
+api/app/tmp/*
 graphql/app/tmp/*
-!post/app/log/.keep
+!api/app/log/.keep
 !graphql/app/log/.keep
-!post/app/tmp/.keep
+!api/app/tmp/.keep
 !graphql/app/tmp/.keep
 
 # TODO Comment out this rule if you are OK with secrets being uploaded to the repo
-post/app/config/initializers/secret_token.rb
-post/app/config/master.key
+api/app/config/initializers/secret_token.rb
+api/app/config/master.key
 graphql/app/config/initializers/secret_token.rb
 graphql/app/config/master.key
 

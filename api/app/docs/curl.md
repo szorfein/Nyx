@@ -13,12 +13,19 @@ curl https://localhost:3000/graphql -X POST -H 'Content-Type: application/json' 
 
 ## GraphQL Mutation
 mutation {
-  setLiftStatus(id: "panorama" status: OPEN) {
-    name
-    status
+  createPost(title: "React", description: "Soon installed") {
+    title
+    description
   }
 }
 
 ## Curl Mutation
-curl https://localhost -H 'Content-Type: application/json' \
-  --data '{"query":"mutation {setLiftStatus(id: \"panorama\" status: OPEN) {name status}}"}'
+curl http://localhost -X POST -H 'Content-Type: application/json' \
+  --data '{"query": "mutation { createPost(title: \"React\", description: \"Soon installed\") { id }}"}'
+
+or 
+```
+curl http://localhost:3000/graphql -X POST -H 'Content-Type: application/graphql' -d 'mutation{ createPost(title: "React", description: "Soon installed") { id title } }'
+```
+## Refs
++ https://graphql.org/graphql-js/graphql-clients/

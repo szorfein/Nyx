@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/szorfein/nyx-post
-  revision: bfbdef18acf3290d93e82a335a7c61cbf1f2f6a1
+  revision: 1ac68d908a7f1f7cd8188a5c8ec3e33b06f75f86
   branch: main
   specs:
     nyx-post (0.1.0)
@@ -171,6 +171,7 @@ DEPENDENCIES
   byebug
   graphiql-rails (= 1.7.0)
   graphql (= 1.9.17)
+  grpc
   listen (~> 3.2)
   nyx-post!
   puma (~> 4.1)

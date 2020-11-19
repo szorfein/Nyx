@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { cache } from './cache';
+import Pages from './pages';
 
 // Initialize ApolloClient
 const client = new ApolloClient({
@@ -13,13 +13,7 @@ const client = new ApolloClient({
 
 ReactDOM.render(
     <ApolloProvider client={client}>
+      <Pages />
     </ApolloProvider>,
     document.getElementById("root")
 );
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-)

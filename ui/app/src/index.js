@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import { ApolloClient, ApolloProvider } from '@apollo/client';
 import { cache } from './cache';
-import Pages from './pages';
+import App from './app';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from './theme';
 
 // Initialize ApolloClient
 const client = new ApolloClient({
@@ -12,8 +14,11 @@ const client = new ApolloClient({
 })
 
 ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <CssBaseline />
     <ApolloProvider client={client}>
-      <Pages />
-    </ApolloProvider>,
-    document.getElementById("root")
+      <App />
+    </ApolloProvider>
+  </ThemeProvider>,
+  document.getElementById("root")
 );

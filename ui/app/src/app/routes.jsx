@@ -1,9 +1,10 @@
 import React from 'react';
 import HomeIcon from '@material-ui/icons/Home';
+import Posts from './posts';
 
 const Home = () => <h1>Home</h1>;
 const About = () => <h1>About</h1>;
-const Posts = () => <h1>Posts</h1>;
+const myPosts = Posts;
 
 const Routes = [
   {
@@ -15,7 +16,7 @@ const Routes = [
   {
     path: '/posts',
     sidebarName: 'Posts',
-    component: Posts
+    component: myPosts
   },
   {
     path: '/about',
